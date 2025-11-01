@@ -1,0 +1,200 @@
+body{
+  font-family: "Roboto", sans-serif;
+  background-color: #f9f9f9;
+  margin: 20px;
+}
+
+h1{
+  text-align: center;
+  color: #333;
+}
+
+form{
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label{
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input[type="text"], textarea, select{
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size:14px;
+}
+
+.form-actions{
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type="submit"], input[type="reset"]{
+  cursor: pointer;
+  font-weight: bold;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+}
+    
+    
+.res{ /* C'est la class du input type reset*/
+  background-color: #CCC;
+  color: #333;
+}
+
+.sub{ /* C'est la class du input type submit*/
+  background-color: #4CAF50;
+  color: white;
+}
+
+#task-list{        /*class ul*/
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 0;
+  list-style: none;
+}
+
+#emptyMessage{            /*id p */
+  color:#6b7280;
+  font-style: italic;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+#task-list li{              /*id li*/   
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-conteneur{       /*div englobant ul et li*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  cursor: pointer;
+}
+
+.done{ /*finition de la tâche, le texte sera barré*/
+  text-decoration: line-through;
+  color: gray;
+}
+
+.task-details{
+  display: none;
+  margin-top: 10px;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.btn{ /* boutons (toogle, edit, delete)*/
+  margin-left: 5px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+    
+.toggle{  /*bouton pour l'état des tâches :réalisée , non réalisée*/
+  background-color: #2196F3; 
+  color: white; 
+}
+    
+.edit{   /*bouton pour modifier une tâche*/
+  background-color: #ff9800; 
+  color: white; 
+}
+    
+.delete{   /*bouton pour effacer une tâche*/
+background-color: #f44336; 
+color: white; 
+}
+
+
+
+/* Media Querries Mobile (jusqu’à 600px) */
+
+@media (max-width: 600px){
+  body{
+    margin: 10px;
+  }
+
+  form, #task-list{
+    width: 100%;
+    padding: 15px;
+  }
+
+  h1{
+    font-size: 1.5rem;
+  }
+
+  input[type="text"], textarea, select{
+    font-size: 13px;
+    padding: 6px;
+  }
+
+  .form-actions{
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input[type="submit"], input[type="reset"]{
+    width: 100%;
+    padding: 10px;
+  }
+
+  #task-list li{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn{
+    margin-top: 5px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .task-conteneur{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+/* Media Querries Tablette (jusqu’à 900px) */
+
+@media (max-width: 900px){
+  form, #task-list{
+    max-width: 90%;
+  }
+  
+  h1{
+    font-size: 1.8rem;
+  }
+}
+
+
+
+
+
+
+
+    
+    

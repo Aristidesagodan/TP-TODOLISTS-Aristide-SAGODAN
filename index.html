@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>TODOLIST</title>
+</head>
+<body>
+  <h1>Mes Tâches</h1>
+    
+  <form id="task-form">
+    <label for="title">Titre</label>
+    <input type="text" id="title" placeholder="Ex: Faire du footing..." required>
+
+    <label for="description">Description (Optionnelle)</label>
+    <textarea id="description" rows="3" placeholder="Détails supplémentaires..."></textarea>
+
+    <label for="datetime">Date & Heure</label>
+    <input type="datetime-local" id="datetime">
+
+    <label for="category">Catégorie</label>
+    <select id="category">
+      <option value="Perso">Perso</option>
+      <option value="Travail">Travail</option>
+      <option value="Urgent">Urgent</option>
+      <option value="Autre">Autre</option>
+    </select>
+
+    <div class="form-actions">
+      <input class="res" type="reset" value="Annuler">
+      <input class="sub" type="submit" value="Ajouter">
+    </div>
+  </form>
+
+  <ul id="task-list"></ul>
+  <p id="emptyMessage">Aucune tâche pour le moment. 
+    Ajoutez-en une pour commencer</p>
+      
+</body>
+<script src="tache.js"></script>
+</html>
