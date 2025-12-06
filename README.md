@@ -1,120 +1,162 @@
-# TD — Première application : Todolist
+✅ Todolist — Première application Web
+📌 Description du projet
 
-## Introduction
+Ce projet consiste à développer une application de gestion de tâches (Todolist) en utilisant HTML, CSS et JavaScript.
+L’objectif est de permettre à un utilisateur de :
 
-La **todolist** (ou gestionnaire de tâches) est un outil incontournable pour s’organiser :  
-elle permet de planifier des actions, de suivre leur avancement, et de gagner en clarté dans son travail.  
+Créer des tâches,
 
-Le principe reste simple : il s’agit de lister des éléments (courses, idées, tâches de projet, etc.) et de marquer ceux qui sont réalisés.  
+Visualiser la liste des tâches,
 
-Dans ce TD, vous allez concevoir et développer **votre première application complète**, en suivant toutes les étapes de la démarche de conception, depuis l’expression du besoin jusqu’à une première version fonctionnelle.
+Modifier l’état d’une tâche (réalisée / non réalisée).
 
----
+Ce projet s’inscrit dans une démarche complète de conception d’une application web, de l’analyse du besoin jusqu’à une première version fonctionnelle.
 
-## Objectifs pédagogiques
+🎯 Objectifs pédagogiques
 
-- Réviser les bases de l’intégration **HTML / CSS**.  
-- Manipuler le **DOM** en JavaScript.  
-- Pratiquer la manipulation de **tableaux** et **objets** en JavaScript.  
-- Découvrir la démarche de **conception d’une application** web.  
+Réviser les bases de l’intégration HTML / CSS
 
----
+Manipuler le DOM en JavaScript
 
-## Expression du besoin
+Manipuler des tableaux et objets JavaScript
 
-Nous avons besoin d’un outil permettant :
+Découvrir les étapes de conception d’une application web
 
-- de **créer** autant de tâches que nécessaire,  
-- de **visualiser** la liste de ces tâches,  
-- de **modifier l’état** d’une tâche : `non réalisée` → `réalisée`.  
+Mettre en place une logique fonctionnelle complète
 
-Chaque tâche sera définie par :  
+🧩 Fonctionnalités principales
+✅ Fonctionnalités obligatoires
 
-- un **titre** (obligatoire),  
-- une **description** (optionnelle),  
-- un **état** (par défaut : *non réalisée*).  
+Ajout d’une tâche avec :
 
----
+un titre obligatoire,
 
-## Rendu attendu
+une description optionnelle,
 
-Une application :  
+un état par défaut : non réalisée.
 
-- **ergonomique**, utilisable confortablement sur **desktop** et **mobile**,  
-- **fonctionnelle**, répondant aux besoins exprimés ci-dessus.  
+Affichage dynamique de la liste des tâches.
 
----
+Changement de l’état d’une tâche (non réalisée ↔ réalisée).
 
-## Méthodologie
+Interface utilisable sur desktop et mobile.
 
-### Étape 1 — Analyse et conception
+Message informatif lorsque la liste est vide.
 
-- Analysez le besoin.  
-- Identifiez les **composants** de l’application.  
-  - Comment l’utilisateur saisira-t-il une tâche ?  
-  - Comment la liste sera-t-elle affichée ?  
-  - Comment représentera-t-on l’état d’une tâche ?  
+⭐ Fonctionnalités bonus (optionnelles)
 
-👉 Cette étape est essentielle pour poser les bases de votre application.
+Suppression d’une tâche.
 
----
+Modification d’une tâche existante.
 
-### Étape 2 — Structure HTML
+Affichage des descriptions sous forme d’accordéon.
 
-- Créez le **markup HTML** pour les différents composants.  
-- Utilisez les balises les plus pertinentes (formulaire, liste, boutons, etc.).  
+Ajout d’une date / heure à chaque tâche.
 
-> **Remarque :**  
-> Pensez à tous les cas possibles :  
-> - tâches non réalisées,  
-> - tâches réalisées,  
-> - aucune tâche dans la liste (afficher un message informatif).
+Catégorisation des tâches.
 
----
+Persistance des données avec le localStorage.
 
-### Étape 3 — Styles CSS
+🛠️ Technologies utilisées
 
-- Stylisez l’interface pour la rendre **ergonomique**.  
-- Pensez à l’**affichage responsive** (desktop / mobile).  
-- Stylisez tous les cas possibles, même si l’application n’est pas encore interactive.  
+HTML5 : structure de l’application
 
-👉 À ce stade, votre application est **jolie mais encore statique**.
+CSS3 : mise en forme, responsivité
 
----
+JavaScript (Vanilla) : logique, DOM, interactivité
 
-### Étape 4 — Interactivité avec JavaScript
+localStorage (optionnel) : persistance des données
 
-- Ajoutez la logique pour rendre l’application **interactive**.  
-- Point de départ : la création d’une tâche.  
-- Afficher les tâches
-- Et, implémentez la modification de l’état d’une tâche.  
+🗂️ Structure du projet
+/todolist
+│── index.html
+│── style.css
+│── script.js
+│── README.md
 
----
+🔍 Démarche de conception
+1️⃣ Analyse du besoin
 
-### Étape 5 — Validation et amélioration
+Identifier les données nécessaires à une tâche
 
-- Vérifiez : votre application répond-elle au **besoin initial** ?  
-- Quelles fonctionnalités pourraient améliorer l’usage ?  
+Définir les actions possibles de l’utilisateur
 
-👉 Exemples de questions à se poser :  
-- Peut-on supprimer une tâche ?  
-- Peut-on modifier une tâche ?  
-- Que se passe-t-il si la liste devient très longue ?
+Réfléchir à l’interface et à l’ergonomie
 
----
+2️⃣ Structure HTML
 
-## Notes pour l’apprenant
+Formulaire de saisie de tâche
 
-- Vous allez naturellement rencontrer la problématique de la **persistance des données** (que devient la liste au rechargement de la page ?).  
-- Prenez aussi un temps pour réfléchir à la **lisibilité** et à la **factorisation** de votre code JavaScript.  
+Zone d’affichage de la liste
 
----
+Boutons d’action
 
-## Bonus (pour aller plus loin)
+Message pour liste vide
 
-- Afficher les descriptions des tâches sous forme d’**accordéon**.  
-- **Supprimer** définitivement une tâche.  
-- **Modifier** une tâche existante.  
-- Associer une information de **date/heure** à chaque tâche.  
-- Associer une catégorie de tâche
-- Persister les données dans le **localStorage**.  (veille technique)
+3️⃣ Stylisation CSS
+
+Mise en page responsive
+
+Styles pour :
+
+tâches réalisées
+
+tâches non réalisées
+
+état vide
+
+4️⃣ Interactivité JavaScript
+
+Création dynamique des tâches
+
+Affichage via le DOM
+
+Gestion des événements (submit, clic, etc.)
+
+Mise à jour de l’état d’une tâche
+
+5️⃣ Validation & améliorations
+
+Tests fonctionnels
+
+Ajout de fonctionnalités bonus
+
+Nettoyage et factorisation du code
+
+▶️ Lancer le projet
+
+Cloner ou télécharger le projet
+
+Ouvrir le fichier index.html dans un navigateur
+
+Ajouter vos premières tâches 🎉
+
+Aucune installation n’est nécessaire.
+
+⚠️ Problématiques abordées
+
+Gestion dynamique du DOM
+
+Structuration des données (tableaux, objets)
+
+Gestion de l’état d’une application
+
+Persistance via le localStorage
+
+Lisibilité du code et bonnes pratiques JavaScript
+
+💡 Améliorations possibles
+
+Ajout de filtres (toutes / réalisées / non réalisées)
+
+Recherche de tâches
+
+Stockage des tâches par utilisateur
+
+Version PWA (application installable)
+
+Thèmes clair / sombre
+
+👨‍🎓 Auteur
+
+Projet réalisé dans le cadre d’un TD pédagogique de développement web.
